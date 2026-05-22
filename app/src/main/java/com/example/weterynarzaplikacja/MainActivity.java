@@ -2,7 +2,10 @@ package com.example.weterynarzaplikacja;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SeekBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
     ArrayList<String> arrayListgatunek;
     ArrayAdapter<String> arrayAdapter;
+    SeekBar seekBar;
+    Button buttonOk;
+    EditText editTextImieNazwisko;
+    EditText editTextCelWizyty;
+    EditText editTextCzas;
 
 
     @Override
@@ -30,5 +38,8 @@ public class MainActivity extends AppCompatActivity {
         arrayListgatunek.add("Świnka morska");
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayListgatunek);
         listView.setAdapter(arrayAdapter);
+        editTextImieNazwisko = findViewById(R.id.editTextText);
+        editTextCelWizyty = findViewById(R.id.editTextText2);
+        editTextCzas = findViewById(R.id.editTextTime);
     }
 }
